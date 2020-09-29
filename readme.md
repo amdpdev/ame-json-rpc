@@ -426,7 +426,7 @@ Emited when the tool direction changed (CW/CCW)
 
 ### AME.Program.Changed
 
-Emited when the current selected program changed (manually or programatically), or when the stored program updated.
+Emited when the current selected program changed (manually or programatically), or when the stored program is updated.
 
     { "method": "AME.Program.Changed", "params": num }
     
