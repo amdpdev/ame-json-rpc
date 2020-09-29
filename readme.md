@@ -199,6 +199,13 @@ To select the channel to communicate with the tool, mos take `--port` argument w
         NM  = "N.m",
         DNM = "dN.m"
     };
+    
+### AMEJointType 
+
+    enum AMEJointType {
+        HARD = "HARD",
+        SOFT = "SOFT"
+    };
 
 		
 ### AMEStatus
@@ -314,17 +321,24 @@ To select the channel to communicate with the tool, mos take `--port` argument w
     };
 
 ## AME RPC Commands
+
+### AME.Tool.Info.Get
+
+Retrieve tool informations
+
+    { "id": 1, "src":"src", "method": "AME.Tool.Info.Get" }
+
 ### AME.Tool.Bip
 
 Emit a short bip
 
-    { "id": 1, "src":"src", method": "AME.Tool.Bip" }
+    { "id": 1, "src":"src", "method": "AME.Tool.Bip" }
 
 ### AME.Tool.Led
 
 Switch on tool leds
 
-    { "id": 1, "src":"src", method": "AME.Tool.Led", "params": leds }
+    { "id": 1, "src":"src", "method": "AME.Tool.Led", "params": leds }
 
 > [required] `leds` : `AMELed[]` : Array of leds to switch on 
 
@@ -334,7 +348,7 @@ Switch on tool leds
 
 Retrieve program (num) from the tool
 
-    { "id": 1, "src":"src", method": "AME.Program.Get" "params": num }
+    { "id": 1, "src":"src", "method": "AME.Program.Get" "params": num }
 
 > [required] `num` : `number` : Program number
 
@@ -344,7 +358,7 @@ Retrieve program (num) from the tool
 
 Store program (program) to the tool
     
-    { "id": 1, "src":"src", method": "AME.Program.Set" "params": program }
+    { "id": 1, "src":"src", "method": "AME.Program.Set" "params": program }
 
 > [required] `program` : `AMEProgram` : Program to store
 
@@ -354,7 +368,7 @@ Store program (program) to the tool
 
 Retrieve user tool calibration 
 
-    { "id": 1, "src":"src", method": "AME.Calibration.User.Get" }
+    { "id": 1, "src":"src", "method": "AME.Calibration.User.Get" }
 
 > return `AMECalibration`
 
@@ -362,7 +376,7 @@ Retrieve user tool calibration
 
 Store user tool calibration
 
-    { "id": 1, "src":"src", method": "AME.Calibration.User.Set", "params": user_calibration }
+    { "id": 1, "src":"src", "method": "AME.Calibration.User.Set", "params": user_calibration }
     
 > [required] `user_calibration` : `AMECalibration` : User calibration to set
 
@@ -370,7 +384,7 @@ Store user tool calibration
 
 Retrieve factory tool calibration 
 
-    { "id": 1, "src":"src", method": "AME.Calibration.Factory.Get" }
+    { "id": 1, "src":"src", "method": "AME.Calibration.Factory.Get" }
 
 > return `AMECalibration`
 
@@ -378,7 +392,7 @@ Retrieve factory tool calibration
 
 Retrieve stored result
 
-    { "id": 1, "src":"src", method": "AME.Result.Get", "params": idx }
+    { "id": 1, "src":"src", "method": "AME.Result.Get", "params": idx }
 
 > [required] `idx` : `number` : Index of the result to retrieve [0,nb_results - 1]
 
