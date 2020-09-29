@@ -13,8 +13,11 @@ The RPC mechanism is based on [JSON-RPC v2] (https://www.jsonrpc.org/specificati
     {"id": 1, "src": "src", "method": "method", "params": params}
 
 > [required] `id`: `number`, the identifier associated with the request, the tool will reuse this id in the reply (id)
+
 > [required] `src`: `string`,  the name of the sender, the tool will reuse this name in the reply `dst`
+
 > [required] `method`: `string`, Name of the method to call on the tool
+
 > [optionnal] `params`: `number`, `string`, `Object`, Arguments passed to the method
 
 #### Reply frame format
