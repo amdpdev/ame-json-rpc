@@ -2,11 +2,11 @@
 
 ## mongoose-os
 
-[mongoose-os] (https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md) is used as a base OS, it offers functionnalities to manage configuration and interact easily with the tool with a standard `remote procedure call (RPC)` mecanism throught a variety of channels.
+[mongoose-os](https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md) is used as a base OS, it offers functionnalities to manage configuration and interact easily with the tool with a standard `remote procedure call (RPC)` mecanism throught a variety of channels.
 
 ### JSON-RPC
 
-The RPC mechanism is based on [JSON-RPC v2] (https://www.jsonrpc.org/specification).
+The RPC mechanism is based on [JSON-RPC v2](https://www.jsonrpc.org/specification).
 
 #### Request frame format
 
@@ -119,7 +119,7 @@ The host connect to the device http server at the address `device_ip:80`
 
 ## mos
 
-[mos] (https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md) is a command line utility, it can be used to configure and manage tool, and to call RPC methods on the tool.
+[mos](https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md) is a command line utility, it can be used to configure and manage tool, and to call RPC methods on the tool.
 
 ### Selecting a channel
 
